@@ -11,19 +11,19 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #06080f;
-    --bg2: #0b0e1a;
-    --bg3: #0f1220;
+    --bg: #080608;
+    --bg2: #100e0e;
+    --bg3: #150f0a;
     --card: rgba(255,255,255,0.035);
-    --card-border: rgba(255,255,255,0.07);
-    --text: #e8eaf2;
-    --muted: #6b7294;
-    --muted2: #4a5070;
-    --accent1: #7c6dff;
-    --accent2: #3b9eff;
-    --accent3: #ff8a4c;
-    --glow1: rgba(124,109,255,0.18);
-    --glow2: rgba(59,158,255,0.14);
+    --card-border: rgba(255,180,60,0.1);
+    --text: #f0ede8;
+    --muted: #8a7f72;
+    --muted2: #5a5048;
+    --accent1: #f5a623;
+    --accent2: #ff6b35;
+    --accent3: #c084fc;
+    --glow1: rgba(245,166,35,0.2);
+    --glow2: rgba(255,107,53,0.15);
   }
 
   html { scroll-behavior: smooth; }
@@ -48,13 +48,13 @@
   }
   body::before {
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(124,109,255,0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(245,166,35,0.1) 0%, transparent 70%);
     top: -150px; left: -100px;
     animation: driftA 20s ease-in-out infinite alternate;
   }
   body::after {
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(59,158,255,0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,107,53,0.08) 0%, transparent 70%);
     bottom: 0; right: -100px;
     animation: driftB 25s ease-in-out infinite alternate;
   }
@@ -95,13 +95,13 @@
   .logo-icon {
     width: 52px; height: 52px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #7c6dff 0%, #3b9eff 50%, #ff8a4c 100%);
+    background: linear-gradient(135deg, #ffd93d 0%, #f5a623 40%, #ff6b35 100%);
     display: flex; align-items: center; justify-content: center;
     font-family: 'Syne', sans-serif;
     font-size: 13px; font-weight: 800;
-    color: #fff;
+    color: #1a0a00;
     letter-spacing: -0.5px;
-    box-shadow: 0 0 24px rgba(124,109,255,0.4), 0 0 48px rgba(124,109,255,0.15);
+    box-shadow: 0 0 24px rgba(245,166,35,0.6), 0 0 56px rgba(245,166,35,0.25), 0 0 80px rgba(255,107,53,0.15);
     flex-shrink: 0;
     user-select: none;
   }
@@ -150,9 +150,10 @@
   }
 
   .toggle-btn.active {
-    color: #fff;
-    background: linear-gradient(135deg, #7c6dff, #3b9eff);
-    box-shadow: 0 0 16px rgba(124,109,255,0.45), 0 0 32px rgba(59,158,255,0.2);
+    color: #1a0a00;
+    background: linear-gradient(135deg, #ffd93d, #f5a623, #ff6b35);
+    box-shadow: 0 0 16px rgba(245,166,35,0.5), 0 0 32px rgba(255,107,53,0.2);
+    font-weight: 600;
   }
 
   /* ── HERO ── */
@@ -181,7 +182,7 @@
     border-radius: 50%;
     background: var(--accent1);
     transform: translateY(-50%);
-    box-shadow: 0 0 8px var(--accent1);
+    box-shadow: 0 0 10px var(--accent1), 0 0 20px rgba(245,166,35,0.4);
     animation: pulse 2s ease infinite;
   }
   @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
@@ -198,7 +199,7 @@
   }
 
   .hero-headline .grad {
-    background: linear-gradient(90deg, #7c6dff 0%, #3b9eff 50%, #ff8a4c 100%);
+    background: linear-gradient(90deg, #ffd93d 0%, #f5a623 35%, #ff6b35 65%, #c084fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -232,19 +233,19 @@
     backdrop-filter: blur(6px);
   }
   .card:hover {
-    border-color: rgba(124,109,255,0.25);
+    border-color: rgba(245,166,35,0.25);
     transform: translateY(-3px);
   }
   .card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at top left, rgba(124,109,255,0.06) 0%, transparent 60%);
+    background: radial-gradient(ellipse at top left, rgba(245,166,35,0.05) 0%, transparent 60%);
     pointer-events: none;
   }
 
   .card-left::before {
-    background: radial-gradient(ellipse at bottom right, rgba(59,158,255,0.08) 0%, transparent 60%);
+    background: radial-gradient(ellipse at bottom right, rgba(255,107,53,0.07) 0%, transparent 60%);
   }
 
   .card-eyebrow {
@@ -260,8 +261,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, rgba(124,109,255,0.15), rgba(59,158,255,0.1));
-    border: 1px solid rgba(124,109,255,0.25);
+    background: linear-gradient(135deg, rgba(245,166,35,0.12), rgba(255,107,53,0.08));
+    border: 1px solid rgba(245,166,35,0.25);
     border-radius: 99px;
     padding: 6px 16px;
     margin-bottom: 18px;
@@ -269,13 +270,13 @@
   .card-class-badge .dot {
     width: 7px; height: 7px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #7c6dff, #3b9eff);
-    box-shadow: 0 0 6px rgba(124,109,255,0.6);
+    background: linear-gradient(135deg, #ffd93d, #ff6b35);
+    box-shadow: 0 0 8px rgba(245,166,35,0.7);
   }
   .card-class-badge span {
     font-size: 0.78rem;
     font-weight: 600;
-    color: #b5b0ff;
+    color: #f5c842;
   }
 
   .card h2 {
@@ -307,7 +308,7 @@
     background: rgba(255,255,255,0.03);
     transition: all 0.25s;
   }
-  .tag:hover { border-color: var(--accent1); color: #b5b0ff; }
+  .tag:hover { border-color: var(--accent1); color: #f5c842; }
 
   /* Right card steps */
   .step-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
@@ -321,8 +322,8 @@
     flex-shrink: 0;
     width: 22px; height: 22px;
     border-radius: 6px;
-    background: rgba(124,109,255,0.12);
-    border: 1px solid rgba(124,109,255,0.2);
+    background: rgba(245,166,35,0.1);
+    border: 1px solid rgba(245,166,35,0.25);
     display: flex; align-items: center; justify-content: center;
     font-size: 0.65rem;
     font-weight: 700;
@@ -334,8 +335,8 @@
   .telegram-banner {
     margin-top: 36px;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(124,109,255,0.1) 0%, rgba(59,158,255,0.07) 100%);
-    border: 1px solid rgba(124,109,255,0.18);
+    background: linear-gradient(135deg, rgba(245,166,35,0.07) 0%, rgba(255,107,53,0.05) 100%);
+    border: 1px solid rgba(245,166,35,0.15);
     padding: 18px 26px;
     display: flex; align-items: center; justify-content: space-between; gap: 16px;
     flex-wrap: wrap;
